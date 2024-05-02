@@ -472,18 +472,18 @@ $(document).ready(() =>{
 //#endregion
 
 
-    let addToQueueRef = document.querySelector("#addToQueue");
-    addToQueueRef.addEventListener("click", (event) => {
-        event.preventDefault();
-        let name = $("#bokaNamn").val();
-        let phone = $("#bokaTelefon").val();
-        let time = $("#bokaTid").val();
-        let guests = $("#bokaGaster").val();
-    
-        let queue = new Queue(name, phone, time, guests);
-        Queues.push(queue);
-        displayQueue();
-    })
+let addToQueueRef = document.querySelector("#addToQueue");
+addToQueueRef.addEventListener("click", (event) => {
+    event.preventDefault();
+    let name = $("#bokaNamn").val();
+    let phone = $("#bokaTelefon").val();
+    let time = $("#bokaTid").val();
+    let guests = $("#bokaGaster").val();
+
+    let queue = new Queue(name, phone, time, guests);
+    Queues.push(queue);
+    displayQueue();
+})
 
 function displayQueue(){
     let queueList = document.querySelector("#QueueList");
